@@ -1,0 +1,117 @@
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Who Can Use <span class="gradient-text">GymAlyze?</span></h2>
+    <p class="section-subtitle">If your gym has cameras — you're ready for GymAlyze.</p>
+    
+    <div class="gym-types-grid">
+      <div class="gym-type-card">
+        <div class="gym-icon">🏢</div>
+        <h3>Commercial Gyms & Fitness Chains</h3>
+        <p>Scale AI insights across multiple locations with centralized analytics.</p>
+      </div>
+      
+      <div class="gym-type-card">
+        <div class="gym-icon">💪</div>
+        <h3>Strength & Conditioning Studios</h3>
+        <p>Perfect for specialized training facilities focused on performance.</p>
+      </div>
+      
+      <div class="gym-type-card">
+        <div class="gym-icon">🏠</div>
+        <h3>Apartment & Community Gyms</h3>
+        <p>Bring professional-grade tracking to residential fitness spaces.</p>
+      </div>
+      
+      <div class="gym-type-card">
+        <div class="gym-icon">👨‍💼</div>
+        <h3>Personal Training Facilities</h3>
+        <p>Enhance 1-on-1 training with detailed form analysis and progress tracking.</p>
+      </div>
+      
+      <div class="gym-type-card">
+        <div class="gym-icon">🏢</div>
+        <h3>Corporate Wellness Gyms</h3>
+        <p>Engage employees with gamification and wellness tracking.</p>
+      </div>
+      
+      <div class="gym-type-card highlighted">
+        <div class="gym-icon">✨</div>
+        <h3>Any Gym with CCTV</h3>
+        <p>Transform your existing camera system into an AI-powered fitness tracker.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gym-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .gym-type-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid #f1f5f9;
+    text-align: center;
+  }
+
+  .gym-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(10, 43, 72, 0.15);
+    border-color: #0a2b48;
+  }
+
+  .gym-type-card.highlighted {
+    background: linear-gradient(135deg, #0a2b48 0%, #1b3b58 100%);
+    color: white;
+    border-color: transparent;
+  }
+
+  .gym-type-card.highlighted:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  .gym-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .gym-type-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  .gym-type-card.highlighted h3 {
+    color: white;
+  }
+
+  .gym-type-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .gym-type-card.highlighted p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  @media (max-width: 768px) {
+    .gym-types-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .gym-type-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

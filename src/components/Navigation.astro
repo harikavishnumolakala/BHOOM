@@ -1,0 +1,191 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <div class="nav-brand">
+        <a href="/" class="brand-link">
+          <img src="/logo.png" alt="GymAlyze Logo" class="brand-logo-img">
+          <div class="brand-text-container">
+            <span class="brand-text">GymAlyze</span>
+            <span class="brand-subtitle">Powered by MetaNova AI</span>
+          </div>
+        </a>
+      </div>
+      
+      <div class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#what-gymalyze-tracks" class="nav-link">What We Track</a>
+        <a href="#gym-owner-benefits" class="nav-link">For Gym Owners</a>
+        <a href="#roadmap" class="nav-link">Coming Soon</a>
+        <a href="/waitlist" class="nav-link">Join Waitlist</a>
+        <a href="#contact-whatsapp" class="nav-link">Contact</a>
+      </div>
+      
+      <div class="nav-actions">
+        <a href="/waitlist" class="btn btn-primary">Join Beta</a>
+      </div>
+      
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+
+  .brand-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .brand-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .brand-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0a2b48 0%, #1b3b58 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .brand-subtitle {
+    font-size: 0.7rem;
+    color: #666;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #0a2b48;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .nav-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      padding: 2rem;
+      transform: translateY(-100vh);
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+      transform: translateY(0);
+    }
+
+    .nav-actions {
+      display: none;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .brand-logo-img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .brand-text {
+      font-size: 1.25rem;
+    }
+
+    .brand-subtitle {
+      font-size: 0.65rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    navToggle?.addEventListener('click', () => {
+      navMenu?.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu?.classList.remove('active');
+      });
+    });
+  });
+</script>

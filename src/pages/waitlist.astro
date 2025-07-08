@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Join GymAlyze Beta Waitlist | AI-Powered Fitness Tracking" description="Join the GymAlyze beta waitlist and be among the first to experience AI-powered fitness tracking. No hardware required.">
+  <Navigation />
+  
+  <section class="waitlist-section">
+    <div class="container">
+      <div class="waitlist-content">
+        <div class="waitlist-header">
+          <h1 class="waitlist-title">🚀 Join the <span class="gradient-text">GymAlyze Beta Waitlist</span></h1>
+          <p class="waitlist-subtitle">
+            We're currently onboarding select gyms across India for our private beta.<br>
+            Join the waitlist and be among the first to experience AI-powered fitness tracking.<br>
+            <strong>No hardware. No complexity. Just plug, play, and train.</strong>
+          </p>
+        </div>
+        
+        <div class="form-container">
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLScZRbxRr_hiVwijac5IK_6JGNf8x6pFWm24Tmz8qyFM3mJQvQ/viewform?embedded=true" 
+            width="100%" 
+            height="1200" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+            class="google-form">
+            Loading…
+          </iframe>
+        </div>
+        
+        <div class="additional-contact">
+          <div class="contact-card">
+            <h3>Need Help or Have Questions?</h3>
+            <p>Our AI agent is available 24/7 on WhatsApp to answer any questions about GymAlyze.</p>
+            <a href="https://wa.me/918877665544" class="btn btn-secondary" target="_blank" rel="noopener">
+              💬 Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .waitlist-section {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #eaf0f5 0%, #dae3ea 100%);
+    min-height: 100vh;
+  }
+
+  .waitlist-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .waitlist-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .waitlist-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+
+  .waitlist-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .form-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    overflow: hidden;
+  }
+
+  .google-form {
+    border-radius: 12px;
+    min-height: 1200px;
+  }
+
+  .additional-contact {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    border: 2px solid #10b981;
+  }
+
+  .contact-card h3 {
+    color: #1a1a1a;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .waitlist-title {
+      font-size: 2rem;
+    }
+
+    .form-container {
+      padding: 1rem;
+      margin: 0 -1rem 3rem -1rem;
+    }
+
+    .google-form {
+      height: 1400px;
+    }
+
+    .contact-card {
+      margin: 0 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-container {
+      border-radius: 12px;
+    }
+    
+    .google-form {
+      height: 1600px;
+    }
+  }
+</style>
